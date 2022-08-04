@@ -24,7 +24,7 @@
 /*==================== Function declaration ====================*/
 uint16_t GetDigitFrequency(uint8_t str[], uint8_t Digit) {
     uint16_t counter = 0;
-    for (uint16_t i = 0; i < 1000; i++) {
+    for (uint16_t i = 0; i < STR_NUM; i++) {
         if (str[i] == Digit) {
             counter++;
         }
@@ -39,7 +39,7 @@ uint16_t GetDigitFrequency(uint8_t str[], uint8_t Digit) {
 int16_t main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    uint8_t S[1000] = "\0";
+    uint8_t S[STR_NUM] = "\0";
 
     // Scan the string.
     scanf_s("%1000s", S, (unsigned)_countof(S));
